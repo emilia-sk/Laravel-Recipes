@@ -20,3 +20,7 @@ Route::get('/', function () {
         'recipes' => Recipe::all()
     ]);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
