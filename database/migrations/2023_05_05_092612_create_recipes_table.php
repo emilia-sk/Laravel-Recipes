@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('author');
+            $table->Integer('time');
+            $table->longText('description');
             $table->string('tags');
             $table->string('ingredients');
             $table->longText('directions');

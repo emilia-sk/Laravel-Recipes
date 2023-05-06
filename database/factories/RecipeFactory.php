@@ -17,8 +17,10 @@ class RecipeFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->word(1),
+            'title' => $this->faker->word(),
             'author' => $this->faker->firstNameMale(),
+            'description' => $this->faker->sentence(2),
+            'time'=>$this->faker->numberBetween(5, 60),
             'tags' => 'beginner, easy, dessert',
             'ingredients' => $this->faker->sentence(1),
             'directions' => $this->faker->paragraph(4),
