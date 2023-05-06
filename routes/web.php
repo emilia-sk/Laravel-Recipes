@@ -15,11 +15,12 @@ use App\Models\Recipe;
 */
 
 Route::get('/', function () {
-    return view('welcome', [
-        'heading' =>'Latest recipes',
+    return view('layout', [
+        'heading' => 'Latest recipes',
         'recipes' => Recipe::all()
     ]);
 });
+
 
 Auth::routes();
 
