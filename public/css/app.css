@@ -7,6 +7,19 @@ body {
 }
 
 /*TOP BAR*/
+.heading-top-bar{
+    color: #554840;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.icon-cake {
+    height: 50px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
 .nav-link {
     color: #554840;
     padding: 0 15px;
@@ -170,6 +183,90 @@ body {
     width: 30px;
 }
 
+/*RECIPES PAGE*/
+
+.row-recipes {
+    background-color:#fdf8f1;
+}
+
+#searchBar {
+    background-color: #554840;
+    border-radius: 64px;
+    height: 60px;
+    z-index: 1;
+    color: white;
+}
+
+#searchBar:focus {
+    box-shadow: none !important;
+}
+
+#searchBar::placeholder {
+    color: white;
+}
+
+.btn-search {
+    position: relative;
+    border-radius: 60px;
+    right: 70px;
+    top: 2px;
+}
+
+.icon-search {
+    height: 40px;
+}
+
+/*RECIPE CARD*/
+
+.card {
+    border: 1px solid #554840;
+}
+
+.recipe-title {
+    color: #554840;
+    font-weight: 600;
+    position: relative;
+    top: 6px;
+    text-align: center;
+}
+
+.recipe-description {
+    font-weight: 200;
+    font-size: 16px;
+    color: #554840;;
+}
+
+.recipe-icon-sm {
+    height: 25px;
+}
+
+.recipe-sm-text {
+    font-size: 14px;
+    color: #554840;
+}
+
+.number {
+    font-weight: bolder;
+}
+
+.recipe-btn {
+    border-radius: 64px;
+    padding: 8px 18px 10px 18px;
+    background-color: #554840;
+    color: white;
+}
+
+.recipe-btn:hover {
+    background-color: #554840;
+    color: white;
+}
+
+.recipe-img {
+    width: 100%;
+    height: 14vw;
+    object-fit: cover;
+}
+
 /*RESPONSIVE STYLES*/
 
 @media (max-width: 576px) {
@@ -216,6 +313,16 @@ body {
     .footer {
         position: relative;
         top: 80px;
+    }
+
+    .card {
+        margin-top: 15px;
+        margin-left: 26px;
+    }
+
+    .recipe-img {
+        height: 50vw;
+        object-fit: revert;
     }
     
 }

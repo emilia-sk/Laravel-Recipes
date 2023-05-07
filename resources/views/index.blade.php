@@ -17,7 +17,8 @@
 
     <header class="row d-flex justify-content between text-center px-3"><!--TOP BAR-->
       <div class="col-sm-12 col-md-3 col-lg-4 pt-3">
-        <p class="display-6 fw-bold">Laravel Recipes</p>
+        <img class="icon-cake" src="{{asset('images/icon-cake.png')}}" alt="cake icon">
+        <a href="/" class="heading-top-bar">Laravel Recipes</a>
       </div>
       <div class="col-sm-12 col-md-5 col-lg-4 pt-0 pt-md-5 pt-lg-4">
         <nav class="nav justify-content-center">
@@ -67,11 +68,11 @@
     </footer>
 
     <div class="wrapper-2"><!--BG SHAPES BOTTOM-->
-      <img class="shape-5 img-fluid" src="/images/shape 5.png">
-      <img class="shape-6 img-fluid" src="/images/shape 6.png">
-      <img class="leaf-1 img-fluid" src="/images/leaf 1.png">
-      <img class="leaf-2 img-fluid" src="/images/leaf 2.png">
-      <img class="dots-2 img-fluid" src="/images/dots.png">
+      <img class="shape-5 img-fluid" src="{{asset('/images/shape 5.png')}}">
+      <img class="shape-6 img-fluid" src="{{asset('/images/shape 6.png')}}">
+      <img class="leaf-1 img-fluid" src="{{asset('/images/leaf 1.png')}}">
+      <img class="leaf-2 img-fluid" src="{{asset('/images/leaf 2.png')}}">
+      <img class="dots-2 img-fluid" src="{{asset('/images/dots.png')}}">
     </div>
 
   </main>
