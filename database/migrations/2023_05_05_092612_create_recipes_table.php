@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('author');
             $table->Integer('time');
             $table->longText('description');
-            $table->string('tags');
             $table->string('ingredients');
             $table->longText('directions');
             $table->timestamps();

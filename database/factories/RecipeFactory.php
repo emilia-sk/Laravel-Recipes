@@ -21,7 +21,6 @@ class RecipeFactory extends Factory
             'author' => $this->faker->firstNameMale(),
             'description' => $this->faker->sentence(2),
             'time'=>$this->faker->numberBetween(5, 60),
-            'tags' => 'beginner, easy, dessert',
             'ingredients' => $this->faker->sentence(1),
             'directions' => $this->faker->paragraph(4),
         ];

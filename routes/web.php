@@ -7,7 +7,7 @@ use App\Http\Controllers\RecipeController;
 //Show Index(main) Page
 Route::get('/', [RecipeController::class, 'index']);
 
-//Show Index(main) Page
+//Show Recipes Page
 Route::get('recipes-page', [RecipeController::class, 'recipesPage']);
 
 
