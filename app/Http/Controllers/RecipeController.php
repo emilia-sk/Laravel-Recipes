@@ -13,9 +13,18 @@ class RecipeController extends Controller
         return view('index');
     }
 
+    //Show All Recipes
     public function recipesPage() {
-        return view('recipes-all', [
-            'recipes' => Recipe::latest()->paginate(6)
+        return view('/recipes/recipes-all', [
+            'recipes' => Recipe::latest()->filter(request(['search']))->paginate(6)
         ]);
     }
+
+    //Show a Single Recipe
+    public function show(Recipe $recipe) {
+        return view('recipes.recipe-single', [
+            'recipe' => $recipe
+        ]);
+    }
+
 }

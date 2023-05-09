@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Recipe;
 use App\Http\Controllers\RecipeController;
+use App\Models\Recipe;
 
 //Show Index(main) Page
 Route::get('/', [RecipeController::class, 'index']);
@@ -10,6 +10,10 @@ Route::get('/', [RecipeController::class, 'index']);
 //Show Recipes Page
 Route::get('recipes-all', [RecipeController::class, 'recipesPage']);
 
-Auth::routes();
+//Show Single Recipe Page
+ Route::get('recipe-single/{id}', function($id) {
+    return view('recipes.recipe-single', [
+        'recipe' => Recipe::find($id)
+    ]);
+}); 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

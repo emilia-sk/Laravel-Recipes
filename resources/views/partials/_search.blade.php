@@ -1,8 +1,6 @@
-
-<x-search>
 <div class="col-12 d-flex justify-content-center mx-4 pt-2 pt-lg-0 pb-0 pb-lg-4"><!--SEARCH BAR-->
     <div class="col-12 col-lg-3">
-        <form class="input-group">
+        <form action="/" class="input-group">
             <input type="text" class="form-control" id="searchBar" name="searchBar"
                 placeholder="Search recipes...">
             <button type="submit" class="btn btn-search mb-2">
@@ -10,4 +8,3 @@
         </form>
     </div>
 </div>
-</x-search>
