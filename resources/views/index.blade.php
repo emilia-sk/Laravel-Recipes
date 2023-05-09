@@ -22,7 +22,7 @@
       </div>
       <div class="col-sm-12 col-md-5 col-lg-4 pt-0 pt-md-5 pt-lg-4">
         <nav class="nav justify-content-center">
-          <li><a class="nav-link" href="/recipes-page">Recipes</a></li>
+          <li><a class="nav-link" href="/recipes-all">Recipes</a></li>
           <li><a class="nav-link" href="">About Us</a></li>
         </nav>
       </div>

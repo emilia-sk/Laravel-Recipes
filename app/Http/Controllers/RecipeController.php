@@ -10,12 +10,12 @@ class RecipeController extends Controller
 {
     //Show Index(main) Page
     public function index() {
-        return view('index', [
-            'recipes' => Recipe::latest()->paginate(6)
-        ]);
+        return view('index');
     }
 
     public function recipesPage() {
-        return view('recipes-page');
+        return view('recipes-all', [
+            'recipes' => Recipe::latest()->paginate(6)
+        ]);
     }
 }

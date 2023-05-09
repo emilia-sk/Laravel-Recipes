@@ -8,8 +8,7 @@ use App\Http\Controllers\RecipeController;
 Route::get('/', [RecipeController::class, 'index']);
 
 //Show Recipes Page
-Route::get('recipes-page', [RecipeController::class, 'recipesPage']);
-
+Route::get('recipes-all', [RecipeController::class, 'recipesPage']);
 
 Auth::routes();
 

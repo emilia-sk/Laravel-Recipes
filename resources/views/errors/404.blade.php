@@ -28,11 +28,11 @@
       </div>
       <div class="col-sm-12 col-md-4 col-lg-4 pt-3">
         <button class="btn btn-top">
-          <img class="icon-btn-top img-fluid" src="{{asset('images/user.png')}}">
+          <img class="icon-btn-top img-fluid" src="{{asset('images/icon-user-light.png')}}">
           Register
         </button>
         <button class="btn btn-top mt-sm-0 mt-md-2 mt-lg-0">
-          <img class="icon-btn-top img-fluid" src="{{asset('images/login.png')}}">
+          <img class="icon-btn-top img-fluid" src="{{asset('images/icon-login.png')}}">
           Login
         </button>
       </div>
@@ -59,9 +59,9 @@
             </div>
         </section>
 
-        <footer class="footer px-4 px-lg-0"><!--FOOTER-->
+        <footer class="footer px-4 px-lg-0 position-absolute"><!--FOOTER-->
             © 2023 Made with ❤ by Emilia |<a class="link-github" href="#"> Github </a> <img class="icon-github"
-                src="img/github.png" />
+                src="img/icon-github.png" />
         </footer>
 
         <div class="wrapper-2"><!--BG SHAPES BOTTOM-->
