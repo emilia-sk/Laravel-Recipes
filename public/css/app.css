@@ -244,6 +244,7 @@ body {
 .recipe-sm-text {
     font-size: 14px;
     color: #554840;
+    white-space: nowrap;
 }
 
 .number {
