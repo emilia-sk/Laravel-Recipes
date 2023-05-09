@@ -1,3 +1,4 @@
+<!--THIS IS THE TEMPLATE LAYOUT FILE FOR ALL OTHERS-->
 <!doctype html>
 <html lang="en">
 
@@ -48,29 +49,12 @@
             <img class="dots-1 img-fluid" src="{{asset('/images/dots.png')}}">
           </div>
 
-        <section class="row d-flex justify-content-center pt-3 px-4"><!--BODY CONTENT-->
-            <div class="row row-recipes p-2 p-lg-4 mb-5">
+     
+              @yield('index')
+              @yield('recipes-all')<!--VIEW ALL RECIPES-->
+              @yield('recipe-single')<!--VIEW SINGLE RECIPE-->
 
-                <div class="col-12 d-flex justify-content-center mx-4 pt-2 pt-lg-0 pb-0 pb-lg-4"><!--SEARCH BAR-->
-                    <div class="col-12 col-lg-3">
-                        <form class="input-group">
-                            <input type="text" class="form-control" id="searchBar" name="searchBar"
-                                placeholder="Search recipes...">
-                            <button type="submit" class="btn btn-search mb-2">
-                                <img class="icon-search" src="{{asset('images/icon-search.png')}}" </button>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="row px-4 pt-4 pt-lg-0 px-lg-5"><!--CARDS WRAPPER-->
-                    
-              @yield('content')<!--VIEW OUTPUT-->
-
-                </div>
-
-            </div>
-        </section>
-
+    
         <footer class="footer px-4 px-lg-0"><!--FOOTER-->
             © 2023 Made with ❤ by Emilia |<a class="link-github" href="#"> Github </a> <img class="icon-github"
                 src="{{asset('images/icon-github.png')}}" />
