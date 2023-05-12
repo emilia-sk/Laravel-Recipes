@@ -10,9 +10,9 @@
           adipiscing elit.Nullam sit amet massa non
           nisl euismod ornare maximus eget lorem.
         </p>
-        <button class="btn btn-hero">
+        <a class="btn btn-hero" href="/recipes-all">
           See Recipes
-        </button>
+        </a>
       </article>
     </section>
     @endsection
