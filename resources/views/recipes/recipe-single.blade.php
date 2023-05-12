@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('components.layout')
 @section('recipe-single')
     <section class="pt-3 px-4">
         <!--BODY CONTENT-->

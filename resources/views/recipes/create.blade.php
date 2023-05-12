@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('components.layout')
 @section('create')
     <section class="pt-3 px-4">
         <!--BODY CONTENT-->

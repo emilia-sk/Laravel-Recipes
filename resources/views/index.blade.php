@@ -1,4 +1,4 @@
-  @extends('layout')
+  @extends('components.layout')
   @section('index')
   <section class="row d-flex justify-content-center mt-0 mt-lg-3"><!--BODY CONTENT-->
       <figure class="col-sm-12 col-md-7 col-lg-5">
