@@ -3,7 +3,7 @@
     <section class="pt-3 px-4">
         <!--BODY CONTENT-->
         <div class="row row-recipes p-2 p-lg-4 mb-5">
-           @include('partials._search')
+          <x-search />
            <a href="/recipes/create">create</a>
             <div class="row px-4 pt-4 pt-lg-0 px-lg-5">
                 <!--CARDS WRAPPER-->
