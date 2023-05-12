@@ -164,7 +164,7 @@ body {
 /*FOOTER*/
 
 .footer {
-    position: relative;
+    position: absolute;
     z-index: 1;
     text-align: center;
     left: 0;
@@ -216,7 +216,7 @@ body {
     height: 40px;
 }
 
-/*RECIPE CARD*/
+/*RECIPE CARD STYLES*/
 
 .card {
     border: 1px solid #554840;
@@ -280,6 +280,51 @@ body {
 .recipe-img-single {
     border: 10px solid #554840;
 }
+
+/*RECIPE CARD STYLES END*/
+
+
+/*FORM STYLES*/
+
+textarea {
+    resize: none;
+    height: 200px;
+}
+
+.btn-post {
+    border-radius: 64px;
+    padding: 8px 28px 10px 28px;
+    background-color: #554840;
+    color: white;
+}
+
+.btn-post:hover {
+    background-color: #554840;
+    color: white;
+}
+
+.link-register-sm {
+    text-decoration: none;
+    color: #ca855a;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+.text-register-sm {
+    font-size: 18px;
+}
+
+.col-manage {
+    height: 550px;
+}
+
+.col-manage{
+    overflow-y: scroll;
+    height: 400px;
+}
+
+/*FORM STYLES END*/
 
 /*RESPONSIVE STYLES*/
 

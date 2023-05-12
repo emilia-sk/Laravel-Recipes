@@ -17,3 +17,5 @@ Route::get('recipes-all', [RecipeController::class, 'recipesPage']);
     ]);
 }); 
 
+//Show Create Recipe Form
+Route::get('/recipes/create', [RecipeController::class, 'create']);

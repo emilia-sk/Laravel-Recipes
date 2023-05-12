@@ -49,10 +49,10 @@
             <img class="dots-1 img-fluid" src="{{asset('/images/dots.png')}}">
           </div>
 
-     
               @yield('index')
               @yield('recipes-all')<!--VIEW ALL RECIPES-->
               @yield('recipe-single')<!--VIEW SINGLE RECIPE-->
+              @yield('create')<!--CREATE RECIPE-->
 
     
         <footer class="footer px-4 px-lg-0"><!--FOOTER-->

@@ -9,22 +9,30 @@ use Illuminate\Http\Request;
 class RecipeController extends Controller
 {
     //Show Index(main) Page
-    public function index() {
+    public function index()
+    {
         return view('index');
     }
 
     //Show All Recipes
-    public function recipesPage() {
+    public function recipesPage()
+    {
         return view('/recipes/recipes-all', [
             'recipes' => Recipe::latest()->filter(request(['search']))->paginate(6)
         ]);
     }
 
     //Show a Single Recipe
-    public function show(Recipe $recipe) {
+    public function show(Recipe $recipe)
+    {
         return view('recipes.recipe-single', [
             'recipe' => $recipe
         ]);
+    }
+
+    //Show Create Form
+    public function create() {
+        return view('recipes.create');
     }
 
 }
