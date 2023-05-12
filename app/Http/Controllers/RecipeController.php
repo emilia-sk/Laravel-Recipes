@@ -25,7 +25,7 @@ class RecipeController extends Controller
     public function recipesPage()
     {
         return view('recipes.recipes-all', [
-            'recipes' => Recipe::latest()->filter(request(['search']))->paginate(6)
+            'recipes' => Recipe::latest()->filter(request(['search']))->paginate(10)
         ]);
     }
 
