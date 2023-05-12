@@ -9,6 +9,8 @@ class Recipe extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title', 'author', 'time', 'description' ,'directions', 'ingredients'];
+
     public function scopeFilter($query, array $filters){
         if($filters['search'] ?? false) {
             $query

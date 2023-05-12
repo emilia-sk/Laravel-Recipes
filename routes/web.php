@@ -7,6 +7,9 @@ use App\Models\Recipe;
 //Show Index(main) Page
 Route::get('/', [RecipeController::class, 'index']);
 
+//Store Recipe Data
+Route::post('recipes-all', [RecipeController::class, 'store']);
+
 //Show Recipes Page
 Route::get('recipes-all', [RecipeController::class, 'recipesPage']);
 
