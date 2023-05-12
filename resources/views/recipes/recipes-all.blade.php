@@ -4,6 +4,7 @@
         <!--BODY CONTENT-->
         <div class="row row-recipes p-2 p-lg-4 mb-5">
           <x-search />
+          <x-flash-message />
            <a href="/recipes/create">create</a>
             <div class="row px-4 pt-4 pt-lg-0 px-lg-5">
                 <!--CARDS WRAPPER-->

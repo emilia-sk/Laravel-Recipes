@@ -7,7 +7,7 @@ body {
 }
 
 /*TOP BAR*/
-.heading-top-bar{
+.heading-top-bar {
     color: #554840;
     text-decoration: none;
     font-weight: 600;
@@ -186,7 +186,7 @@ body {
 /*RECIPES PAGE*/
 
 .row-recipes {
-    background-color:#fdf8f1;
+    background-color: #fdf8f1;
 }
 
 #searchBar {
@@ -234,7 +234,8 @@ body {
 .recipe-description {
     font-weight: 200;
     font-size: 16px;
-    color: #554840;;
+    color: #554840;
+    ;
 }
 
 .recipe-icon-sm {
@@ -337,16 +338,23 @@ textarea {
 /*FORM STYLES END*/
 
 /*MANAGE PAGE STYLES*/
+
 .col-manage {
     height: 550px;
 }
 
-.col-manage{
+.col-manage {
     overflow-y: scroll;
     height: 400px;
 }
 
 /*MANAGE PAGE STYLES END*/
+
+.flash-message {
+    color: #554840;
+    font-size: 30px;
+    text-align: center;
+}
 
 /*RESPONSIVE STYLES*/
 
@@ -362,7 +370,7 @@ textarea {
         right: 0px;
         font-size: 18px;
     }
-    
+
     .wrapper-2 {
         position: relative;
     }
@@ -405,5 +413,5 @@ textarea {
         height: 50vw;
         object-fit: revert;
     }
-    
+
 }

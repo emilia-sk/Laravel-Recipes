@@ -51,7 +51,7 @@ class RecipeController extends Controller
 
         Recipe::create($formFields);
 
-        return redirect('/recipes-all');
+        return redirect('/recipes-all')->with('message', 'Recipe created successfully!');
     }
 
 }
