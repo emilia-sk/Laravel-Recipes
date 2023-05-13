@@ -30,14 +30,14 @@
                 </nav>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 pt-3">
-                <button class="btn btn-top">
+                <a class="btn btn-top" href="/register">
                     <img class="icon-btn-top img-fluid" src="{{asset('images/icon-user-light.png')}}">
                     Register
-                </button>
-                <button class="btn btn-top mt-sm-0 mt-md-2 mt-lg-0">
+                </a>
+                <a class="btn btn-top mt-sm-0 mt-md-2 mt-lg-0">
                     <img class="icon-btn-top img-fluid" src="{{asset('images/icon-login.png')}}">
                     Login
-                </button>
+                </a>
             </div>
         </header>
 
@@ -48,11 +48,12 @@
             <img class="shape-4 img-fluid" src="{{asset('/images/shape 4.png')}}">
             <img class="dots-1 img-fluid" src="{{asset('/images/dots.png')}}">
           </div>
-
+            
               @yield('index')
               @yield('recipes-all')<!--VIEW ALL RECIPES-->
               @yield('recipe-single')<!--VIEW SINGLE RECIPE-->
               @yield('create')<!--CREATE RECIPE-->
+              @yield('register')
 
         <footer class="footer px-4 px-lg-0"><!--FOOTER-->
             © 2023 Made with ❤ by Emilia |<a class="link-github" href="#"> Github </a> <img class="icon-github"

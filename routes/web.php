@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\UserController;
 use App\Models\Recipe;
 
 //Show Index(main) Page
@@ -31,3 +32,9 @@ Route::put('/recipe-single/{recipe}', [RecipeController::class, 'update']);
 
 //Delete Recipe
 Route::delete('/recipe-single/{recipe}', [RecipeController::class, 'destroy']);
+
+//Show Register Form
+Route::get('/register', [UserController::class, 'create']);
+
+//Create New User
+Route::post('/users', [UserController::class, 'store']);
