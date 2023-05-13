@@ -5,16 +5,29 @@
         <div class="row row-recipes p-2 p-lg-4 mb-5">
             <div class="row row-recipes pt-5 pb-5 d-flex justify-content-center">
 
-                <div class="col-12 col-lg-9 p-4 col-recipe"> <!--RECIPE START-->
+                <div class="col-12 col-lg-9 p-4 col-recipe">
+                    <!--RECIPE START-->
                     <div class="col-12 text-center position-relative">
                         <h4>{{ $recipe->title }}</h4>
-                        <a href="/recipes/{{$recipe->id}}/edit" class="btn link-edit">
+
+                        <!--EDIT LINK-->
+                        <a href="/recipes/{{ $recipe->id }}/edit" class="btn link-edit">
                         <img class="icon-edit" src="{{ asset('images/icon-edit.png') }}">
-                         Edit</a>
+                        Edit</a>
+                       
+                        <form method="POST" action="/recipe-single/{{$recipe->id}}"><!--DELETE FORM-->
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn link-delete">
+                                <img class="icon-edit" src="{{ asset('images/icon-delete.png') }}">
+                                Delete</button>
+                        </form>
+
                     </div>
                     <div class="col-12 text-center">
                         <img class="recipe-icon-sm" src="{{ asset('images/icon-clock.png') }}" alt="clock icon">
-                        <p class="recipe-text-md d-block d-lg-inline"><span class="number">{{ $recipe->time }}</span> Minutes
+                        <p class="recipe-text-md d-block d-lg-inline"><span class="number">{{ $recipe->time }}</span>
+                            Minutes
                         </p>
                         <img class="recipe-icon-sm" src={{ asset('images/icon-book.png') }} alt="book icon">
                         <p class="recipe-text-md d-block d-lg-inline"><span class="number"><?php echo str_word_count($recipe->ingredients); ?></span>
@@ -35,7 +48,8 @@
                             <p>{{ $recipe->directions }}</p>
                         </div>
                     </div>
-                </div><!--RECIPE END-->
+                </div>
+                <!--RECIPE END-->
 
             </div>
         </div>

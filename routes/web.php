@@ -28,3 +28,6 @@ Route::get('/recipes/{recipe}/edit', [RecipeController::class, 'edit']);
 
 //Update Recipe
 Route::put('/recipe-single/{recipe}', [RecipeController::class, 'update']);
+
+//Delete Recipe
+Route::delete('/recipe-single/{recipe}', [RecipeController::class, 'destroy']);

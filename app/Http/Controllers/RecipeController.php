@@ -55,7 +55,7 @@ class RecipeController extends Controller
 
         Recipe::create($formFields);
 
-        return redirect('/recipes-all')->with('message', 'Recipe created successfully!');
+        return redirect('/recipes-all')->with('message', 'Recipe Created Successfully!');
     }
 
     //Show Edit Form
@@ -64,7 +64,6 @@ class RecipeController extends Controller
         return view('recipes.edit', ['recipe' => $recipe]);
     }
 
-    
     //Update Recipe Data
     public function update(Request $request, Recipe $recipe)
     {
@@ -86,6 +85,13 @@ class RecipeController extends Controller
         return view('recipes.recipe-single', [
             'recipe' => $recipe
         ]);
+    }
+
+    //Delete Recipe
+    public function destroy(Recipe $recipe) {
+        $recipe->delete();
+
+        return redirect('/recipes-all')->with('message', 'Recipe Deleted Successfully!');
     }
 
 }

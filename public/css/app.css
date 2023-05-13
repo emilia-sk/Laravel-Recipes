@@ -364,14 +364,21 @@ textarea {
 
 .link-edit {
     position: absolute;
-    right: 20px;
+    right: 120px;
     top: 20px;
     color: #554840;
 }
 
 .icon-edit {
-    height: 40px;
-    padding-right: 5px;
+    height: 30px;
+}
+
+.link-delete {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    color: #554840;
+    font-weight: 500;
 }
 
 /*RESPONSIVE STYLES*/
