@@ -12,7 +12,7 @@
                     <div class="col-12 col-md-6 col-lg-3">
                         <!--CARD-->
                         <div class="card h-10">
-                            <img src="{{ asset('images/recipe-pic.jpg') }}" class="recipe-img img-fluid" alt="" />
+                            <img src="{{$recipe->picture ? asset('storage/' . $recipe->picture) : asset('/images/no-image.svg')}}" class="recipe-img img-fluid" alt="" />
                             <!--CARD IMG-->
                             <div class="card-header">
                                 <div class="row">

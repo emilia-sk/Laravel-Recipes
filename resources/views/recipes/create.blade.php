@@ -2,7 +2,7 @@
 @section('create')
     <section class="pt-3 px-4">
         <!--BODY CONTENT-->
-        <div class="row row-recipes pt-5 pb-5 d-flex justify-content-center">
+        <div class="row row-recipes mb-3 pt-2 d-flex justify-content-center">
             <div class="col-12 col-lg-7 p-3 col-border">
                 <h4 class="text-center">Create a recipe!</h4>
                 <hr>
@@ -50,7 +50,13 @@
                         @enderror
                     </div>
 
-                    <div class="col-12 d-flex justify-content-center mt-3">
+                <div class="row d-flex justify-content-center pt-4">
+                    <div class="col-12 col-lg-4 position-relative text-center">
+                        <label for="inputPicture" class="form-label">Photo</label>
+                        <input type="file" class="form-control mb-3" id="inputPicture" name="picture">
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-center">
                         <button class="btn btn-post">Post</button>
                         <!--CARD BTN-->
                     </div>

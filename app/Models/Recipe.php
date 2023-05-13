@@ -9,7 +9,7 @@ class Recipe extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'author', 'time', 'description' ,'directions', 'ingredients'];
+    protected $fillable = ['title', 'author', 'time', 'description' ,'directions', 'ingredients', 'picture'];
 
     public function scopeFilter($query, array $filters){
         if($filters['search'] ?? false) {

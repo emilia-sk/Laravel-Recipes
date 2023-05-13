@@ -5,7 +5,7 @@
         <div class="row row-recipes p-2 p-lg-4 mb-5">
             <div class="row row-recipes pt-5 pb-5 d-flex justify-content-center">
 
-                <div class="col-12 col-lg-9 p-4 col-recipe">
+                <div class="col-12 col-lg-9 p-4 col-recipe"><!--RECIPE START-->
                     <div class="col-12 text-center">
                         <h4>{{$recipe->title}}</h4>
                     </div>
@@ -20,7 +20,8 @@
                     <hr>
                     <div class="row d-flex justify-content-center">
                         <div class="col-12 col-lg-5">
-                            <img class="recipe-img-single img-fluid w-75 mx-4" src="{{asset('images/recipe-pic.jpg')}}">
+                            <img class="recipe-img-single img-fluid w-75 mx-4" 
+                            src="{{$recipe->picture ? asset('storage/' . $recipe->picture) : asset('/images/no-image.svg')}}">
                         </div>
                         <div class="col-12 col-lg-6 text-center text-lg-start pt-3 pt-lg-0">
                             <h5>Ingredients</h5>
@@ -29,7 +30,8 @@
                             <p>{{$recipe->directions}}</p>
                         </div>
                     </div>
-                </div>
+                </div><!--RECIPE END-->
+
             </div>
         </div>
     </section>

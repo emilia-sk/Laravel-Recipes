@@ -49,6 +49,10 @@ class RecipeController extends Controller
             'directions' => 'required',
         ]);
 
+        if($request->hasFile('picture')) {
+            $formFields['picture'] = $request->file('picture')->store('pictures', 'public');
+        }
+
         Recipe::create($formFields);
 
         return redirect('/recipes-all')->with('message', 'Recipe created successfully!');
