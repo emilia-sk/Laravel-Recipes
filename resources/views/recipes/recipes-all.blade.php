@@ -54,9 +54,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div><!--CARD END-->
                     </div>
-                    <!--CARD END-->
                 @endforeach
             </div>
 

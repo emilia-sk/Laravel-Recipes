@@ -58,4 +58,34 @@ class RecipeController extends Controller
         return redirect('/recipes-all')->with('message', 'Recipe created successfully!');
     }
 
+    //Show Edit Form
+    public function edit(Recipe $recipe) {
+        
+        return view('recipes.edit', ['recipe' => $recipe]);
+    }
+
+    
+    //Update Recipe Data
+    public function update(Request $request, Recipe $recipe)
+    {
+        $formFields = $request->validate([
+            'title' => 'required',
+            'author' => ['required', Rule::unique('recipes', 'author')],
+            'time' => 'required',
+            'description' => 'required',
+            'ingredients' => 'required',
+            'directions' => 'required',
+        ]);
+
+        if($request->hasFile('picture')) {
+            $formFields['picture'] = $request->file('picture')->store('pictures', 'public');
+        }
+
+        $recipe->update($formFields);
+
+        return view('recipes.recipe-single', [
+            'recipe' => $recipe
+        ]);
+    }
+
 }

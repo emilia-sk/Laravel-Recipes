@@ -25,3 +25,6 @@ Route::get('/recipes/create', [RecipeController::class, 'create']);
 
 //Show Edit Recipe Form
 Route::get('/recipes/{recipe}/edit', [RecipeController::class, 'edit']);
+
+//Update Recipe
+Route::put('/recipe-single/{recipe}', [RecipeController::class, 'update']);

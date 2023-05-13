@@ -266,7 +266,8 @@ body {
 .recipe-img {
     width: 100%;
     height: 14vw;
-    object-fit: cover;
+    object-fit: scale-down;
+    background: white;
 }
 
 .col-recipe {
@@ -335,6 +336,11 @@ textarea {
     color: red;
 }
 
+.img-edit {
+    height: 220px;
+    float: left;
+}
+
 /*FORM STYLES END*/
 
 /*MANAGE PAGE STYLES*/
@@ -354,6 +360,18 @@ textarea {
     color: #554840;
     font-size: 30px;
     text-align: center;
+}
+
+.link-edit {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #554840;
+}
+
+.icon-edit {
+    height: 40px;
+    padding-right: 5px;
 }
 
 /*RESPONSIVE STYLES*/
