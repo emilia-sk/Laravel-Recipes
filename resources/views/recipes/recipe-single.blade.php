@@ -39,7 +39,7 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-12 col-lg-5">
                             <img class="recipe-img-single img-fluid w-75 mx-4"
-                                src="{{ $recipe->picture ? asset('storage/' . $recipe->picture) : asset('/images/no-image.png') }}">
+                            src="{{$recipe->picture ? asset('storage/' . $recipe->picture) : asset('/images/no-image.png')}}" alt="" />
                         </div>
                         <div class="col-12 col-lg-6 text-center text-lg-start pt-3 pt-lg-0">
                             <h5>Ingredients</h5>
