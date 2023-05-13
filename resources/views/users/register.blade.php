@@ -36,7 +36,7 @@
                     </div>
                     <div class="col-12 d-flex justify-content-center mt-3">
                         <p class="text-register-sm">Already have an account?</p> <a class="link-register-sm"
-                            href="">Login</a>
+                            href="/login">Login</a>
                     </div>
                 </form>
 

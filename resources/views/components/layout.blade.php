@@ -30,14 +30,25 @@
                 </nav>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 pt-3">
+                @auth
+                <span>Welcome, {{auth()->user()->name}}</span>
+                <form method="POST" action="/logout">
+                    @csrf
+                    <button class="btn btn-top mt-sm-0 mt-md-2 mt-lg-0" type="submit">
+                        <img class="icon-btn-top img-fluid" src="{{asset('images/icon-login.png')}}">
+                        Logout
+                    </button>
+                </form>
+                @else
                 <a class="btn btn-top" href="/register">
                     <img class="icon-btn-top img-fluid" src="{{asset('images/icon-user-light.png')}}">
                     Register
                 </a>
-                <a class="btn btn-top mt-sm-0 mt-md-2 mt-lg-0">
+                <a class="btn btn-top mt-sm-0 mt-md-2 mt-lg-0" href="/login">
                     <img class="icon-btn-top img-fluid" src="{{asset('images/icon-login.png')}}">
                     Login
                 </a>
+                @endauth
             </div>
         </header>
 
@@ -53,7 +64,8 @@
               @yield('recipes-all')<!--VIEW ALL RECIPES-->
               @yield('recipe-single')<!--VIEW SINGLE RECIPE-->
               @yield('create')<!--CREATE RECIPE-->
-              @yield('register')
+              @yield('register')<!--USER REGISTER-->
+              @yield('login')<!--USER LOGIN-->
 
         <footer class="footer px-4 px-lg-0"><!--FOOTER-->
             © 2023 Made with ❤ by Emilia |<a class="link-github" href="#"> Github </a> <img class="icon-github"
