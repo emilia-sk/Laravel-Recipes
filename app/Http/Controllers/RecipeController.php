@@ -49,7 +49,7 @@ class RecipeController extends Controller
             'directions' => 'required',
         ]);
 
-        if($request->hasFile('picture')) {
+        if ($request->hasFile('picture')) {
             $formFields['picture'] = $request->file('picture')->store('pictures', 'public');
         }
 
@@ -61,14 +61,20 @@ class RecipeController extends Controller
     }
 
     //Show Edit Form
-    public function edit(Recipe $recipe) {
-        
+    public function edit(Recipe $recipe)
+    {
+
         return view('recipes.edit', ['recipe' => $recipe]);
     }
 
     //Update Recipe Data
     public function update(Request $request, Recipe $recipe)
     {
+        //Check if logged user is the owner of the recipe
+        if ($recipe->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action!');
+        }
+
         $formFields = $request->validate([
             'title' => 'required',
             'author' => ['required', Rule::unique('recipes', 'author')],
@@ -78,7 +84,7 @@ class RecipeController extends Controller
             'directions' => 'required',
         ]);
 
-        if($request->hasFile('picture')) {
+        if ($request->hasFile('picture')) {
             $formFields['picture'] = $request->file('picture')->store('pictures', 'public');
         }
 
@@ -90,10 +96,23 @@ class RecipeController extends Controller
     }
 
     //Delete Recipe
-    public function destroy(Recipe $recipe) {
+    public function destroy(Recipe $recipe)
+    {
+
+        //Check if logged user is the owner of the recipe
+        if ($recipe->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action!');
+        }
+
         $recipe->delete();
 
         return redirect('/recipes-all')->with('message', 'Recipe Deleted Successfully!');
+    }
+
+    //Manage Recipes
+    public function manage()
+    {
+        return view('recipes.manage', ['recipes' => auth()->user()->recipes()->get()]);
     }
 
 }

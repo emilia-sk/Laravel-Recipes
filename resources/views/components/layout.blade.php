@@ -39,6 +39,10 @@
                         Logout
                     </button>
                 </form>
+                <a class="btn btn-top" href="/recipes/manage">
+                    <img class="icon-btn-top img-fluid" src="{{asset('images/icon-user-light.png')}}">
+                   Manage Recipes
+                </a>
                 @else
                 <a class="btn btn-top" href="/register">
                     <img class="icon-btn-top img-fluid" src="{{asset('images/icon-user-light.png')}}">
@@ -66,6 +70,7 @@
               @yield('create')<!--CREATE RECIPE-->
               @yield('register')<!--USER REGISTER-->
               @yield('login')<!--USER LOGIN-->
+              @yield('manage')<!--MANAGE RECIPES-->
 
         <footer class="footer px-4 px-lg-0"><!--FOOTER-->
             © 2023 Made with ❤ by Emilia |<a class="link-github" href="#"> Github </a> <img class="icon-github"

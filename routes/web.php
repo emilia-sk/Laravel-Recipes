@@ -47,3 +47,6 @@ Route::get('/login', [UserController::class, 'login'])->name('login ')->middlewa
 
 //Log In User
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+//Manage Recipes
+Route::get('/recipes/manage', [RecipeController::class, 'manage'])->middleware('auth');
