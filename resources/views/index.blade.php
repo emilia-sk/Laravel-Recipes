@@ -6,9 +6,7 @@
       </figure>
       <article class="col-sm-12 col-md-7 col-lg-4 col-hero-right">
         <h3 class="heading-hero">Sweet Recipes</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit.Nullam sit amet massa non
-          nisl euismod ornare maximus eget lorem.
+        <p>Whether you're after an old favourite or inspiration for something new, we have the perfect recipe.
         </p>
         <a class="btn btn-hero" href="/recipes-all">
           See Recipes
