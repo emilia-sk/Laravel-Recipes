@@ -22,28 +22,28 @@ Route::get('recipes-all', [RecipeController::class, 'recipesPage']);
 }); 
 
 //Show Create Recipe Form
-Route::get('/recipes/create', [RecipeController::class, 'create']);
+Route::get('/recipes/create', [RecipeController::class, 'create'])->middleware('auth');
 
 //Show Edit Recipe Form
-Route::get('/recipes/{recipe}/edit', [RecipeController::class, 'edit']);
+Route::get('/recipes/{recipe}/edit', [RecipeController::class, 'edit'])->middleware('auth');
 
 //Update Recipe
-Route::put('/recipe-single/{recipe}', [RecipeController::class, 'update']);
+Route::put('/recipe-single/{recipe}', [RecipeController::class, 'update'])->middleware('auth');
 
 //Delete Recipe
-Route::delete('/recipe-single/{recipe}', [RecipeController::class, 'destroy']);
+Route::delete('/recipe-single/{recipe}', [RecipeController::class, 'destroy'])->middleware('auth');
 
 //Show Register Form
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
 //Create New User
 Route::post('/users', [UserController::class, 'store']);
 
 //Logout
-Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 //Show Login Form
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login ')->middleware('guest');
 
 //Log In User
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
