@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');//if we have a user that created some recipes, when that user is deleted, the recipes will also be deleted(cascaded);
             $table->string('title');
             $table->string('picture')->nullable();
             $table->string('author');

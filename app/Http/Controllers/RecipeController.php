@@ -53,6 +53,8 @@ class RecipeController extends Controller
             $formFields['picture'] = $request->file('picture')->store('pictures', 'public');
         }
 
+        $formFields['user_id'] = auth()->id();
+
         Recipe::create($formFields);
 
         return redirect('/recipes-all')->with('message', 'Recipe Created Successfully!');

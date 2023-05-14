@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Recipe;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,8 +16,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $user = User::factory()->create([ //Admin(default) user that owns seeded recipes
+            'name' => 'Admin',
+            'email' => 'admin@mail.com'
+        ]);
 
-        Recipe::factory(6)->create();
+        Recipe::factory(6)->create([
+            'user_id' => $user->id
+        ]);
     }
 }
