@@ -33,7 +33,7 @@
                 @auth
                 <p class="text-welcome d-inline pb-3 px-2"> Welcome, {{auth()->user()->name}}</p>
                 <a class="btn btn-top" href="/recipes/manage">
-                    <img class="icon-btn-top img-fluid" src="{{asset('images/icon-user-light.png')}}">
+                    <img class="icon-btn-top img-fluid" src="{{asset('images/icon-cookbook-light.png')}}">
                    Manage Recipes
                 </a>
                 <form method="POST" action="/logout" class="d-inline">

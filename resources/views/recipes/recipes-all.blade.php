@@ -5,15 +5,20 @@
         <div class="row row-recipes p-2 p-lg-4 mb-5">
             <x-search />
             <x-flash-message />
-            <a href="/recipes/create">create</a>
+                <div class="col col-lg-3 d-flex justify-content-center">
+                    <a class="btn btn-create mt-sm-0 mt-md-2 mt-lg-0" href="/recipes/create">
+                        <img class="icon-btn-top img-fluid" src="{{ asset('images/icon-cookbook-light.png') }}">
+                        Create A Recipe
+                    </a>
+                </div>
             <div class="row px-4 pt-4 pt-lg-0 px-lg-5">
                 <!--CARDS WRAPPER-->
                 @foreach ($recipes as $recipe)
                     <div class="col-12 col-md-6 col-lg-3">
                         <!--CARD-->
                         <div class="card h-10">
-                            <img src="{{$recipe->picture ? asset('storage/' . $recipe->picture) : asset('/images/no-image.png')}}"
-                             class="recipe-img img-fluid" alt="" />
+                            <img src="{{ $recipe->picture ? asset('storage/' . $recipe->picture) : asset('/images/no-image.png') }}"
+                                class="recipe-img img-fluid" alt="" />
                             <!--CARD IMG-->
                             <div class="card-header">
                                 <div class="row">
@@ -55,7 +60,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><!--CARD END-->
+                        </div>
+                        <!--CARD END-->
                     </div>
                 @endforeach
             </div>

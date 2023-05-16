@@ -220,6 +220,20 @@ body {
     height: 40px;
 }
 
+.btn-create {
+    border-radius: 64px;
+    padding: 8px 25px 10px 18px;
+    background-color: #554840;
+    color: white;
+    position: absolute;
+    top: 150px;
+    left: 110px;
+}
+
+.btn-create:hover {
+    background-color: #554840;
+    color: white;
+}
 /*RECIPE CARD STYLES*/
 
 .card {
@@ -441,6 +455,10 @@ textarea {
     .recipe-img {
         height: 50vw;
         object-fit: revert;
+    }
+
+    .btn-create {
+        position: static;
     }
 
 }
