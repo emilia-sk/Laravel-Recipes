@@ -1,5 +1,3 @@
-<img src ="/public/images/screenshot-1.png" width="520" height="300">
-
 ## Laravel Recipes App
 
 #### Laravel Recipes is a web application for dessert recipes. Features CRUD functionality and user authentication.
