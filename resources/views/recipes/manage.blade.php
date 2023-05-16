@@ -2,7 +2,7 @@
 @section('manage')
     <section class="pt-3 px-4">
         <!--BODY CONTENT-->
-        <div class="row row-recipes pt-5 pb-5 d-flex justify-content-center">
+        <div class="row row-recipes pt-2 pb-4 d-flex justify-content-center">
             <div class="col-12 col-lg-6 px-5 pt-4 pb-4 col-border">
                 <h4 class="text-center">Manage My Recipes</h4>
                 <hr>
@@ -35,7 +35,7 @@
                         @endforeach
                     @else
                         <div class="row bg-light border">
-                            <p>No recipes found</p>
+                            <p class="pt-0 pt-lg-3">No recipes found</p>
                         </div>
                     @endunless
 

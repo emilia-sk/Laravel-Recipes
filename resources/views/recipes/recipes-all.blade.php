@@ -5,7 +5,7 @@
         <div class="row row-recipes p-2 p-lg-4 mb-5">
             <x-search />
             <x-flash-message />
-                <div class="col col-lg-3 d-flex justify-content-center">
+                <div class="col col-lg-3 d-flex justify-content-center"><!--CREATE RECIPE LINK-->
                     <a class="btn btn-create mt-sm-0 mt-md-2 mt-lg-0" href="/recipes/create">
                         <img class="icon-btn-top img-fluid" src="{{ asset('images/icon-cookbook-light.png') }}">
                         Create A Recipe

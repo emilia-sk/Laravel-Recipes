@@ -6,7 +6,7 @@ body {
     font-size: 22px;
 }
 
-/*TOP BAR*/
+/*TOP BAR STYLES*/
 .heading-top-bar {
     color: #554840;
     text-decoration: none;
@@ -57,7 +57,10 @@ body {
     font-weight: 600;
 }
 
+/*TOP BAR STYLES END*/
+
 /*PAGE SHAPES*/
+
 .shape-1 {
     z-index: -1;
     position: absolute;
@@ -135,7 +138,9 @@ body {
     bottom: 0;
 }
 
-/* PAGE HERO*/
+/*PAGE SHAPES END*/
+
+/* PAGE HERO STYLES*/
 
 .heading-hero {
     font-family: 'Rum Raisin', sans-serif;
@@ -165,7 +170,9 @@ body {
     align-self: center;
 }
 
-/*FOOTER*/
+/* PAGE HERO STYLES END*/
+
+/*FOOTER STYLES*/
 
 .footer {
     position: relative;
@@ -187,7 +194,9 @@ body {
     width: 30px;
 }
 
-/*RECIPES PAGE*/
+/*FOOTER STYLES END*/
+
+/*RECIPES PAGE STYLES*/
 
 .row-recipes {
     background-color: #fdf8f1;
@@ -234,6 +243,9 @@ body {
     background-color: #554840;
     color: white;
 }
+
+/*RECIPES PAGE STYLES END*/
+
 /*RECIPE CARD STYLES*/
 
 .card {
@@ -372,14 +384,6 @@ textarea {
     height: 400px;
 }
 
-/*MANAGE PAGE STYLES END*/
-
-.flash-message {
-    color: #554840;
-    font-size: 30px;
-    text-align: center;
-}
-
 .link-edit {
     position: absolute;
     right: 120px;
@@ -397,6 +401,16 @@ textarea {
     top: 20px;
     color: #554840;
     font-weight: 500;
+}
+
+/*MANAGE PAGE STYLES END*/
+
+/*OTHER STYLES*/
+
+.flash-message {
+    color: #554840;
+    font-size: 30px;
+    text-align: center;
 }
 
 /*RESPONSIVE STYLES*/
