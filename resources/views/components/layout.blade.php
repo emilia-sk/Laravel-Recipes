@@ -73,7 +73,7 @@
               @yield('manage')<!--MANAGE RECIPES-->
 
         <footer class="footer px-4 px-lg-0"><!--FOOTER-->
-            © 2023 Made with ❤ by Emilia |<a class="link-github" href="#"> Github </a> <img class="icon-github"
+            © 2023 Made with ❤ by Emilia |<a class="link-github" href="https://github.com/emilia-sk/Laravel-Recipes" target="_blank"> Github </a> <img class="icon-github"
                 src="{{asset('images/icon-github.png')}}" />
         </footer>
 
