@@ -53,6 +53,10 @@ body {
     height: 25px;
 }
 
+.text-welcome {
+    font-weight: 600;
+}
+
 /*PAGE SHAPES*/
 .shape-1 {
     z-index: -1;

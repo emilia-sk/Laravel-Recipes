@@ -31,18 +31,18 @@
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 pt-3">
                 @auth
-                <span>Welcome, {{auth()->user()->name}}</span>
-                <form method="POST" action="/logout">
-                    @csrf
-                    <button class="btn btn-top mt-sm-0 mt-md-2 mt-lg-0" type="submit">
-                        <img class="icon-btn-top img-fluid" src="{{asset('images/icon-login.png')}}">
-                        Logout
-                    </button>
-                </form>
+                <p class="text-welcome d-inline pb-3 px-2"> Welcome, {{auth()->user()->name}}</p>
                 <a class="btn btn-top" href="/recipes/manage">
                     <img class="icon-btn-top img-fluid" src="{{asset('images/icon-user-light.png')}}">
                    Manage Recipes
                 </a>
+                <form method="POST" action="/logout" class="d-inline">
+                    @csrf
+                    <button class="btn btn-top mt-2 mt-md-2 mt-lg-0" type="submit">
+                        <img class="icon-btn-top img-fluid" src="{{asset('images/icon-login.png')}}">
+                        Logout
+                    </button>
+                </form>
                 @else
                 <a class="btn btn-top" href="/register">
                     <img class="icon-btn-top img-fluid" src="{{asset('images/icon-user-light.png')}}">
